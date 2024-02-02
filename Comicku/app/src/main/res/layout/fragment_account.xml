@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:padding="0dp"
+    android:background="@color/black">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/account">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_header_round_third"
+                android:padding="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/name_app"
+                    android:text="Comic.Ku"
+                    android:fontFamily="@font/remachinescriptpersonaluse"
+                    android:textSize="40sp"
+                    android:shadowColor="@color/white"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="10"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name_app"
+                    android:text="Manga App"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/rooney"
+                    android:textSize="10sp"
+                    />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-30dp"
+            android:layout_marginEnd="-20dp"
+            android:paddingLeft="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/bg_header_round_secondary"
+                android:elevation="10dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="5dp"
+                android:text="@string/your_account"
+                android:textAppearance="@style/Comicku.TextAppearance.Title4"
+                android:textColor="@android:color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-15dp"
+                android:background="@drawable/bg_body_round_primary"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@id/accountFrag_btnSignOut"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/accountFrag_tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/my_name"
+                        android:textAppearance="@style/Comicku.TextAppearance.Body1"
+                        android:textColor="@color/darkgrey"/>
+
+                    <TextView
+                        android:id="@+id/accountFrag_tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/my_email"
+                        android:textAppearance="@style/Comicku.TextAppearance.Body1"
+                        android:textColor="@android:color/darker_gray" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/accountFrag_btnSignOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:backgroundTint="@color/colorRed"
+                    android:insetTop="10dp"
+                    android:insetBottom="10dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/sign_out"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/Comicku.TextAppearance.Title3"
+                    app:shapeAppearance="@style/Comicku.ShapeAppearance" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Me"
+                android:fontFamily="@font/rooneyregular"
+                android:id="@+id/developed"
+                android:textSize="12sp"
+                android:layout_marginTop="90dp"
+                android:layout_marginBottom="10dp"
+                android:layout_centerHorizontal="true"/>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/developed"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/identity">
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="120dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/cardview">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/profilku"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maulana Mahfud"
+                android:textSize="20sp"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/rooneymedium"
+
+                android:layout_toRightOf="@+id/cardview"
+                android:id="@+id/name_developer"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="maulanamahfud2113@gmail.com"
+                android:textSize="10sp"
+                android:fontFamily="@font/rooneyregular"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/name_developer"
+                android:layout_toRightOf="@+id/cardview"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/identity"
+                android:layout_centerHorizontal="true"
+                android:gravity="center">
+                <com.google.android.material.button.MaterialButton
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_icon_feather_instagram"
+                    android:backgroundTint="@color/black"
+                    app:iconTint="@color/white"
+                     android:id="@+id/accountFrag_btnInstagram"
+                     app:iconSize="20dp"
+                    app:iconGravity="end"
+                    android:layout_marginEnd="0dp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="52dp"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_icon_simple_facebook"
+                    android:backgroundTint="@color/black"
+                    app:iconTint="@color/white"
+                    android:layout_toRightOf="@id/accountFrag_btnInstagram"
+                    android:id="@+id/accountFrag_btnFacebook"
+                    app:iconSize="20dp"
+                    android:layout_marginEnd="0dp"/>
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:icon="@drawable/ic_icon_awesome_github"
+                    android:backgroundTint="@color/black"
+                    app:iconTint="@color/white"
+                    android:layout_toRightOf="@id/accountFrag_btnFacebook"
+                    android:id="@+id/accountFrag_btnGithub"
+                    android:layout_centerInParent="true"
+                    app:iconSize="20dp"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

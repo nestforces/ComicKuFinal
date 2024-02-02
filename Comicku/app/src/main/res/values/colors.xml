@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="white">#ffffff</color>
+    <color name="colorMain">#212121</color>
+    <color name="colorText">#ffffff</color>
+    <color name="colorMainAlpha60">#99212121</color>
+    <color name="colorMainLight">#fDfDfD</color>
+    <color name="colorMainLightAlpha80">#CC2D2D2D</color>
+    <color name="colorGreen">#49BF55</color>
+    <color name="colorGreenAlpha80">#CC4990BF</color>
+    <color name="colorBlue">#1f6fbc</color>
+    <color name="colorBlueKomiku">#994164b2</color>
+    <color name="colorBlueKomikuReal">#4164b2</color>
+    <color name="colorRed">#D97070</color>
+    <color name="colorBlueKomikuYoung">#40A9E3</color>
+    <color name="darkgrey">#A9A9A9</color>
+
+    <color name="white80">#99ffffff</color>
+    <color name="bg">#18364A</color>
+    <color name="bg80">#990f2636</color>
+
+    <color name="graylight">#F3FFFD</color>
+    <color name="startblue">#3DE4FA</color>
+    <color name="endblue">#2CC5DA</color>
+    <color name="endblue80">#992CC5DA</color>
+    <color name="tag">#92D6FA</color>
+
+    <color name="grey">#dddddd</color>
+    <color name="pink">#E84269</color>
+
+    <color name="yellow">#CCF7CA18</color>
+    <color name="black">#000000</color>
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "335936610847",
+    "firebase_url": "https://comickufinal.firebaseio.com",
+    "project_id": "comickufinal",
+    "storage_bucket": "comickufinal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:335936610847:android:d318cb57ede981da9c6b2a",
+        "android_client_info": {
+          "package_name": "com.example.comickufinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "335936610847-h3pe9ggpgdsveor4rp6koa20418gfu6l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.comickufinal",
+            "certificate_hash": "b29d33ba95140e9f16eee19a861ce43111b802cc"
+          }
+        },
+        {
+          "client_id": "335936610847-slcbbrdhr9c4bacuhbif278fu49l4m14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkYZZYNTeTuvRKGFqKvQ0TMCvmkN3k648"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "335936610847-slcbbrdhr9c4bacuhbif278fu49l4m14.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/srl"
+    android:background="@drawable/detail">
+
+<androidx.core.widget.NestedScrollView
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingLeft="20dp"
+    android:paddingTop="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="100dp"
+    android:theme="@style/AppTheme.ScrollEdge"
+    android:id="@+id/main_layout"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/homeFrag_tvGreet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/good_morning"
+            android:textAppearance="@style/Comicku.TextAppearance.Body1"
+            android:fontFamily="@font/rooney"
+            android:textSize="20sp"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/homeFrag_tvFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my_name"
+            android:textSize="20sp"
+            android:fontFamily="@font/rooneyregular"
+            android:textColor="@android:color/white" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/homeFrag_btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:gravity="start|center_vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/search_here"
+            android:textAllCaps="false"
+            android:textAppearance="@style/Comicku.TextAppearance.Body1"
+            android:textColor="@android:color/black"
+            app:cornerRadius="10dp"
+            app:icon="@drawable/ic_baseline_search_24"
+            app:iconTint="@color/colorMain"
+            app:strokeColor="@color/colorBlueKomikuYoung"
+            app:strokeWidth="2dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+
+                android:text="Recomended"
+                android:textSize="30sp"
+                android:textAppearance="@style/Comicku.TextAppearance.Title3"
+                android:fontFamily="@font/remachinescriptpersonaluse"
+                android:shadowColor="@color/white"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="8"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="10dp"/>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/container_carousel_comic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.example.custom.NestedScrollableHost
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_recommended"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                            <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                            <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                            <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                            <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                            <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                            <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                            <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                            <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                            <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                        </LinearLayout>
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/homeFrag_rvRecommended"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:theme="@style/AppTheme.ScrollEdge"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_popular_manga"
+                        android:visibility="gone"/>
+                </com.example.custom.NestedScrollableHost>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/homeFrag_btnMorePopular"
+                android:text="@string/popular"
+                android:textAppearance="@style/Comicku.TextAppearance.Title3"
+                android:fontFamily="@font/remachinescriptpersonaluse"
+                android:shadowColor="@color/white"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="8"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/homeFrag_btnMorePopular"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:gravity="end|center"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/more"
+                android:textAppearance="@style/Comicku.TextAppearance.Body2"
+                android:fontFamily="@font/rooneyregular"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.example.custom.NestedScrollableHost
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/shimmer_popular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                    <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                    <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                    <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                    <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                    <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                    <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                    <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                    <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                    <include layout="@layout/shimmer_placeholder_popular_layout"/>
+                    </LinearLayout>
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/homeFrag_rvPopular"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:theme="@style/AppTheme.ScrollEdge"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_popular_manga"
+                    android:visibility="gone"/>
+            </com.example.custom.NestedScrollableHost>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/homeFrag_btnMoreExplore"
+                android:text="Explore"
+                android:textAppearance="@style/Comicku.TextAppearance.Title3"
+                android:fontFamily="@font/remachinescriptpersonaluse"
+                android:shadowColor="@color/white"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="8"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/homeFrag_btnMoreExplore"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:gravity="end|center"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/more"
+                android:textAppearance="@style/Comicku.TextAppearance.Body2"
+                android:fontFamily="@font/rooneyregular"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/container_explore_comic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:orientation="vertical">
+
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_explore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <include layout="@layout/shimmer_item_manga"/>
+                    <include layout="@layout/shimmer_item_manga"/>
+                    <include layout="@layout/shimmer_item_manga"/>
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/homeFrag_rvExplore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_manga_card
+"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/homeFrag_btnMoreGenre"
+                android:text="@string/genre"
+                android:fontFamily="@font/remachinescriptpersonaluse"
+                android:shadowColor="@color/white"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="8"
+                android:textStyle="bold"
+                android:textSize="30sp"
+                android:textAppearance="@style/Comicku.TextAppearance.Title3"
+                android:textColor="@android:color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/homeFrag_btnMoreGenre"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:checkable="true"
+                android:gravity="end|center"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="@string/more"
+                android:textAppearance="@style/Comicku.TextAppearance.Body2"
+                android:fontFamily="@font/rooneyregular"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmer_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:columnCount="3"
+                    android:useDefaultMargins="true">
+                    <include layout="@layout/shimmer_genre"/>
+                    <include layout="@layout/shimmer_genre"/>
+                    <include layout="@layout/shimmer_genre"/>
+                    <include layout="@layout/shimmer_genre"/>
+                    <include layout="@layout/shimmer_genre"/>
+                    <include layout="@layout/shimmer_genre"/>
+                    <include layout="@layout/shimmer_genre"/>
+                    <include layout="@layout/shimmer_genre"/>
+                    <include layout="@layout/shimmer_genre"/>
+                </GridLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/homeFrag_rvGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3"
+                tools:listitem="@layout/item_genre"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/country"
+            android:textAppearance="@style/Comicku.TextAppearance.Title3"
+            android:fontFamily="@font/remachinescriptpersonaluse"
+            android:shadowColor="@color/white"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="8"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@android:color/white" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:columnCount="3"
+            android:useDefaultMargins="true">
+
+            <LinearLayout
+                android:id="@+id/homeFrag_llManga"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:background="@drawable/bg_round_green"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_flag_of_japan" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/manga"
+                    android:textAppearance="@style/Comicku.TextAppearance.Body2"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/japan_comic"
+                    android:textAppearance="@style/Comicku.TextAppearance.Body2"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/homeFrag_llManhua"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:background="@drawable/bg_round_red"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_flag_of_china" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/manhua"
+                    android:textAppearance="@style/Comicku.TextAppearance.Body2"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/china_comic"
+                    android:textAppearance="@style/Comicku.TextAppearance.Body2"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/homeFrag_llManhwa"
+                android:layout_column="2"
+                android:layout_columnWeight="1"
+                android:background="@drawable/bg_round_blue"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_flag_of_south_korea" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/manhwa"
+                    android:textAppearance="@style/Comicku.TextAppearance.Body2"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/korea_comic"
+                    android:textAppearance="@style/Comicku.TextAppearance.Body2"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </GridLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

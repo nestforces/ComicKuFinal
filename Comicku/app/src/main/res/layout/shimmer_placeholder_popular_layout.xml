@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="170dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/colorMain">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/simpleMangaItem_imageView"
+                android:layout_width="170dp"
+                android:layout_height="110dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:background="@color/grey"
+
+                />
+
+            <TextView
+                android:id="@+id/simpleMangaItem_tvType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="2dp"
+                android:background="@color/colorMainLightAlpha80"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textAppearance="@style/Comicku.TextAppearance.Body3"
+                android:textColor="@android:color/white"
+                tools:text=""
+                android:shadowRadius="8"
+                android:shadowDy="0.0"
+                android:shadowDx="0.0"
+                android:shadowColor="@color/white"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/simpleMangaItem_tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/Comicku.TextAppearance.Body2"
+            android:textColor="@android:color/white"
+            tools:text=""
+            android:shadowColor="@android:color/white"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="8"
+            android:background="@color/colorMainLightAlpha80"/>
+
+        <TextView
+            android:id="@+id/simpleMangaItem_tvUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:background="@color/colorMainLightAlpha80"
+            android:textAppearance="@style/Comicku.TextAppearance.Body2"
+            android:textColor="@color/colorBlueKomikuYoung"
+            tools:text="" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

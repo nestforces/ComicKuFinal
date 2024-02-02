@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/colorMainLightAlpha80"
+    app:cardCornerRadius="30dp"
+    app:cardElevation="1dp"
+    app:cardUseCompatPadding="true"
+    app:strokeColor="@color/colorBlueKomikuYoung"
+    app:strokeWidth="1dp"
+
+    >
+
+
+    <FrameLayout
+        android:id="@+id/_mangaItem_frameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="0dp"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/mangaItem_imageView"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:scaleType="fitXY"
+            tools:src="@drawable/example"
+            />
+
+        <TextView
+            android:id="@+id/mangaItem_tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_round_green"
+            android:padding="5dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:shadowRadius="8"
+            android:shadowDy="0.0"
+            android:shadowDx="0.0"
+            android:shadowColor="@color/white"
+            android:textAppearance="@style/Comicku.TextAppearance.Body3"
+            android:textColor="@android:color/white"
+            tools:text="Manga" />
+    </FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/mangaItem_tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textAppearance="@style/Comicku.TextAppearance.Title4"
+            android:textColor="@color/white"
+            tools:text="Valhalla"
+            android:shadowRadius="8"
+            android:shadowDy="0.0"
+            android:shadowDx="0.0"
+            android:shadowColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/flag"/>
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:id="@+id/flag"
+            android:layout_margin="5dp"
+            android:tooltipText=""
+            android:background="@drawable/ic_flag_of_japan"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="0dp"
+        android:layout_gravity="center"
+        android:id="@+id/mainRelative">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/mangaItem_tvChapter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/Comicku.TextAppearance.Body1"
+                android:textColor="@color/colorBlueKomikuYoung"
+                tools:text="Chapter 99" />
+
+            <TextView
+                android:id="@+id/mangaItem_tvUpdateOn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/Comicku.TextAppearance.Body1"
+                android:textColor="@color/colorBlueKomikuYoung"
+                tools:text="4 jam lalu" />
+
+
+
+            <TextView
+                android:id="@+id/mangaItem_Status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/Comicku.TextAppearance.Body1"
+                android:textColor="@color/colorBlueKomikuYoung"
+                tools:text="OnGoing" />
+        </LinearLayout>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

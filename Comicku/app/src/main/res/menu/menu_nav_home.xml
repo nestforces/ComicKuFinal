@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/home"
+        android:fontFamily="@font/rooneyregular"
+        android:textStyle="bold"/>
+    <item
+        android:id="@+id/nav_history"
+        android:icon="@drawable/ic_baseline_history_24"
+        android:title="@string/history"
+        android:fontFamily="@font/rooneyregular"
+        android:textStyle="bold"/>
+    <item
+        android:id="@+id/nav_favorite"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="@string/favorite"
+        android:fontFamily="@font/rooneyregular"
+        android:textStyle="bold"/>
+    <item
+        android:id="@+id/nav_account"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="@string/account"
+        android:fontFamily="@font/rooneyregular"
+        android:textStyle="bold"/>
+</menu>
